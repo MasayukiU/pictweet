@@ -1,0 +1,9 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @tweets.each do |tweet| %>
+    <%# <div class="content_post" style="background-image: url(<%= tweet.image %>
+      <%# <p><%= tweet.text %>
+    <%# </div> %>
+        <%= render partial: "tweets/tweet", locals: { tweet: tweet } %><%# eachを外で使っていてそのままのtweetでは中では通用しない為 %>
+  <% end %>
+</div>
